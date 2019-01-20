@@ -7,8 +7,18 @@ class PezDispenser {
 		this.characterName = characterName;
 	}
 
+	public boolean isEmpty (){
+		if(pezCount == 0){
+			return true;
+		} else return false;
+	}
+
 	public void fill() {
 		pezCount = MAX_PEZ;
+	}
+
+	public void fill(int pezAmount) {
+		pezCount += pezAmount;
 	}
 
 	public String getCharacterName() {
