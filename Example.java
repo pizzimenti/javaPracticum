@@ -18,5 +18,16 @@ public class Example {
 		if (dispenser.isEmpty()) {
 			System.out.println("All the pez are gone");
 		}
+		dispenser.fill(4);
+		dispenser.fill(2);
+		while (dispenser.dispense()) {
+			System.out.println("Chomp.");
+		}
+		try {
+			dispenser.fill(400);
+			System.out.println(("this won't happen"));
+		} catch (IllegalArgumentException iae) {
+			System.out.println("Whoa there, you can't load more");
+		}
 	}
 }
