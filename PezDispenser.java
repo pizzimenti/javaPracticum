@@ -22,6 +22,15 @@ class PezDispenser {
 		pezCount += pezAmount;
 	}
 
+	public boolean dispense() {
+		boolean wasDispensed = false;
+		if (!isEmpty()) {
+			pezCount--;
+			wasDispensed = true;
+		}
+		return wasDispensed;
+	}
+
 	public String getCharacterName() {
 		return characterName;
 	}
