@@ -7,10 +7,11 @@ class PezDispenser {
 		this.characterName = characterName;
 	}
 
-	public boolean isEmpty (){
-		if(pezCount == 0){
+	public boolean isEmpty() {
+		if (pezCount == 0) {
 			return true;
-		} else return false;
+		} else
+			return false;
 	}
 
 	public void fill() {
